@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Archivo de configuración de ANT para compilar el proyecto de ejemplo dado.
+Contiene los siguientes comandos:
+* clean - Borra tanto las clases, como el JAR como el JavaDoc generado.
+* build - Compila el código fuente *.java en binarios de Java *.class 
+* jar - Compila el código fuente *.java y empaqueta los resultados en un archivo
+	ejecutable *.jar
+* runclient - Ejecuta el cliente de la aplicación.
+* runserver - Ejecuta el servidor de la aplicación
+* doc - Crea el Javadoc del proyecto.
+Author: Manuel Castillo, manuel_castillo_cc@ciencias.unam.mx
+Version: 1.0, january 2016 -->
+
+<project>
+	<target name="clean" >
+		<delete dir="build" />
+		<delete dir="doc" />
+	</target>
+	<target name="build" >
+		<mkdir dir="build/classes" />
+		<javac srcdir="src" destdir="build/classes" >
+			<classpath >
+			</classpath >
+		</javac>
+	</target>
+	<target name="jar" >
+		<antcall target="build" />
+		<mkdir dir="build/jar" />
+		<jar destfile="build/jar/NachintochLibrary.jar" basedir="build/classes" >
+		</jar >
+	</target>
+	<target name="doc" >
+		<mkdir dir="doc" />
+		<javadoc sourcepath="src" destdir="doc" access="private" windowtitle="Nachintoch Library" doctitle="Nachintoch Library" author="true" version="true" >
+			<classpath >
+			</classpath >
+		</javadoc>
+	</target >
+</project>
