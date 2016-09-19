@@ -1,0 +1,18 @@
+Biblioteca de utilidades para Android y Java SE.
+
+----------------------------- Versión 1.0 --------------------------------------
+
+Manuel "Nachintoch" Castillo
+
+Este proyecto es una biblioteca que extiende los tipos de datos envolventes de
+Java (como Integer, Double, Char...) y además resuelve la física que se requiere
+para implementar Sprites; como se usan en videojuegos.
+
+El proyecto fue hecho con el IDE Netbeans.
+
+------------------- CONTENIDO DEL REPOSITORIO ----------------------------------
+* La carpeta "src" contiene el código fuente de la biblioteca.
+
+------------- VERSIONES CON LAS QUE HA SIDO SATISFACTORIAMENTE PROBADO ---------
+Java SE 1.8.0_66
+Android Marshmallow (6.0.1)
